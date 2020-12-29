@@ -8,16 +8,24 @@ import SEO from "../components/seo"
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
 
-  const allProjects = projects.map(project => {
-    return <Project data={project} key={project.id} />
-  })
+  // const allProjects = projects.map(project => {
+  //   return <Project data={project} key={project.id} />
+  // })
+
+  const allProjects = [...projects, ...projects, ...projects].map(project => (
+    <Link to={`/projects/${project.slug}`} className='project-preview'>
+      <h4>{project.title}</h4>
+      <img src={project.image.fluid.src} alt={`${project.title} Screenshot`} />
+    </Link>
+  ))
 
   return (
     <Layout>
       <SEO title="Projects" />
       <h1>Projects</h1>
-      { allProjects }
-      <Link to="/">Go back to the homepage!</Link>
+      <section className='project-previews'>
+        { allProjects }
+      </section>
     </Layout>
   )
 }

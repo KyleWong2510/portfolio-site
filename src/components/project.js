@@ -5,13 +5,14 @@ const Project = ({ data }) => {
     <p key={tech}>{tech}</p>
   ))
   return (
-    <div className='project' key={data.id}>
-      <h1>HELLO</h1>
-      <h1>{data.title}</h1>
+    <article className='project' key={data.id}>
+      <h2>{data.title}</h2>
       <p>{data.abstract.abstract}</p>
-      {tech}
       <img src={data.image.fluid.src} alt={data.image.title} />
-    </div>
+      <div>
+        {tech}
+      </div>
+    </article>
   )
 }
 
