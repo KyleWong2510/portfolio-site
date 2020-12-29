@@ -2,13 +2,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
+import Project from '../components/project'
 import SEO from "../components/seo"
 
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
 
   const allProjects = projects.map(project => {
-    return project.title
+    return <Project data={project} key={project.id} />
   })
 
   return (
@@ -36,6 +37,7 @@ export const query = graphql`
           }
         }
         slug
+        id
       }
     }
   }
