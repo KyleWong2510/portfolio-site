@@ -15,8 +15,8 @@ const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {f
           <Image fixed={fixed} alt={title}/>
         </article>
         <article>
-          <h1>Abstract</h1>
-          <h3>{abstract}</h3>
+          <h1>Abstract:</h1>
+          <p>{abstract}</p>
           <p>{techStack}</p>
         </article>
       </section>

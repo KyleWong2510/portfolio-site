@@ -13,8 +13,6 @@ exports.createPages = async ({graphql, actions}) => {
     }
   `)
 
-  console.log("RESULT", result)
-
   result.data.projects.nodes.forEach((project) => {
     createPage({
       path: `/projects/${project.slug}`,
