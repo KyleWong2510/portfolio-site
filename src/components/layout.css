@@ -66,13 +66,31 @@ main {
 .project-preview {
   background-color: grey;
   padding: 1rem;
+  width: 100%;
 }
 
 .project-previews {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 25px;
-  row-gap: 25px;
+  width: 100%;
+  max-width: 1170px;
+}
+
+.project-previews div {
+  height: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .project-previews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .project-previews {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .about {
@@ -96,4 +114,9 @@ main {
   margin: 0.25rem;
   padding: 0.5rem;
   width: fit-content;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
 }

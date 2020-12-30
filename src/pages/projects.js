@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from 'gatsby-image'
 
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
@@ -10,7 +11,7 @@ const Projects = ({ data }) => {
   const allProjects = [...projects, ...projects, ...projects].map(project => (
     <Link to={`/projects/${project.slug}`} className='project-preview'>
       <h4>{project.title}</h4>
-      <img src={project.image.fluid.src} alt={`${project.title} Screenshot`} />
+      <Image fluid={project.image.fluid} alt={`${project.title} Screenshot`} />
     </Link>
   ))
 
@@ -36,7 +37,7 @@ export const query = graphql`
         techStack
         image {
           fluid {
-            src
+            ...GatsbyContentfulFluid
           }
         }
         slug

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import TechBadge from '../components/techBadge'
 
 const About = ({ data }) => {
@@ -12,9 +13,9 @@ const About = ({ data }) => {
   const formattedFamiliar = familiarWith.map(tech => <TechBadge tech={tech} />)
   const formattedOther = otherSkills.map(skill => <TechBadge tech={skill} />)
 
-  console.log(languages)
   return (
     <Layout>
+      <SEO title="About" />
       <div className='about'>
         <h1>About</h1>
         <p>Hi I am Kyle and I am a software developer from denver co...</p>
