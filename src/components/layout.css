@@ -1,8 +1,8 @@
 * {
   box-sizing: border-box;
   color: black;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -73,4 +73,27 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 25px;
   row-gap: 25px;
+}
+
+.about {
+  align-content: center;
+}
+
+.skills-container {
+  text-align: center;
+  margin: none;
+}
+
+.badge-container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  background-color: grey;
+  height: fit-content;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  width: fit-content;
 }

@@ -2,15 +2,10 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Project from '../components/project'
 import SEO from "../components/seo"
 
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
-
-  // const allProjects = projects.map(project => {
-  //   return <Project data={project} key={project.id} />
-  // })
 
   const allProjects = [...projects, ...projects, ...projects].map(project => (
     <Link to={`/projects/${project.slug}`} className='project-preview'>
