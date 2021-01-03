@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 import TechBadge from '../components/techBadge'
 
 const About = ({ data }) => {
-  const { contentfulAbout: { aboutMe: { aboutMe }, languages, libraries, familiarWith, otherSkills }} = data
+  const { contentfulAbout: { personalBio: { personalBio }, devBio: { devBio }, languages, libraries, familiarWith, otherSkills }} = data
 
   const formattedLang = languages.map(lang => <TechBadge tech={lang} />)
   const formattedLib = libraries.map(lib => <TechBadge tech={lib} />)
@@ -17,25 +17,44 @@ const About = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <div className='about'>
-        <h1>About</h1>
-        <p>Hi I am Kyle and I am a software developer from denver co...</p>
-        { aboutMe }
+        {/* <h1>About</h1> */}
+        <div className='personal-bio-container'>
+          <div className='personal-bio'>
+            <div className='image'></div>
+            <p>
+              { personalBio }
+            </p>
+          </div>
+        </div>
+        <div className='dev-bio'>
+          <p>
+            { devBio }
+          </p>
+        </div>
         <section className='skills-container'>
-          <h3>Languages</h3> 
-          <div className='badge-container'>
-            { formattedLang }
+          <div className='skill-type'>
+            <h4>Languages</h4> 
+            <div className='badge-container'>
+              { formattedLang }
+            </div>
           </div>
-          <h3>Libraries / Frameworks</h3>
-          <div className='badge-container'>
-            { formattedLib }
+          <div className='skill-type'>
+            <h4>Libraries / Frameworks</h4>
+            <div className='badge-container'>
+              { formattedLib }
+            </div>
           </div>
-          <h3>Familiar With</h3>
-          <div className='badge-container'>
-            { formattedFamiliar }
+          <div className='skill-type'>
+            <h4>Familiar With</h4>
+            <div className='badge-container'>
+              { formattedFamiliar }
+            </div>
           </div>
-          <h3>Other Skills</h3>
-          <div className='badge-container'>
-            { formattedOther }
+          <div className='skill-type'>
+            <h4>Other Skills</h4>
+            <div className='badge-container'>
+              { formattedOther }
+            </div>
           </div>
         </section>
       </div>
@@ -46,8 +65,11 @@ const About = ({ data }) => {
 export const query = graphql`
   {
     contentfulAbout {
-      aboutMe {
-        aboutMe
+      personalBio {
+        personalBio
+      }
+      devBio {
+        devBio
       }
       languages
       libraries

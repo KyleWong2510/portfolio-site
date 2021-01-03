@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   color: black;
+  line-height: 1.75;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -40,6 +41,10 @@ header {
   width: 100vw;
 }
 
+h1 {
+  margin-bottom: 1rem;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -57,10 +62,12 @@ footer {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
-  max-width: 960px;
   min-height: 80vh;
-  padding: 1rem 1rem 1.5rem;
+  width: 100%;
 }
 
 .project-preview {
@@ -69,8 +76,9 @@ main {
 }
 
 .project-previews {
-  width: 100%;
+  align-self: center;
   max-width: 1170px;
+  width: 100%;
 }
 
 .project-previews div {
@@ -92,13 +100,62 @@ main {
   }
 }
 
+/* ABOUT  */
 .about {
   align-content: center;
 }
 
+.image {
+  background-color: black;
+  border: solid 1px black;
+  height: 300px;
+  margin-right: 3rem;
+  width: 300px;
+}
+
+.personal-bio-container {
+  align-items: center;
+  background-color: grey;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.personal-bio {
+  display: flex;
+  width: 50%;
+}
+
+.personal-bio p {
+  align-self: center;
+  width: 50%;
+}
+
+.dev-bio {
+  align-items: center;
+  background-color: gold;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.dev-bio p {
+  width: 50%;
+}
+
 .skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: none;
+  padding: 2rem;
+}
+
+.skill-type {
+  margin: 0.5rem 0;
+  width: 50%;
 }
 
 .badge-container {
@@ -109,9 +166,11 @@ main {
 
 .tech-badge {
   background-color: grey;
+  border-radius: 3px;
   height: fit-content;
+  font-size: small;
   margin: 0.25rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   width: fit-content;
 }
 

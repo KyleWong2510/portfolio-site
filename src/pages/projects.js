@@ -8,7 +8,7 @@ import Image from 'gatsby-image'
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
 
-  const allProjects = projects.map(project => (
+  const allProjects = [...projects, ...projects, ...projects, ...projects].map(project => (
     <Link to={`/projects/${project.slug}`} className='project-preview'>
       <Image fluid={project.image.fluid} alt={`${project.title} Screenshot`} />
       <h4>{project.title}</h4>
