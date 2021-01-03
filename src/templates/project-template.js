@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from '../components/Layout'
 import Image from 'gatsby-image'
 import TechBadge from '../components/techBadge'
+import LinkButton from '../components/linkButton'
 
 const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {fixed}, techStack, repoUrl, deployedUrl}}}) => {
   const formattedTech = techStack.map(tech => <TechBadge tech={tech} />)
@@ -10,21 +11,21 @@ const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {f
   return (
     <Layout>
       <div className='single-project-top'>
-        <Link to='/projects'>Back to Projects</Link>
+        <Link to='/projects' className='link-btn'>Back to Projects</Link>
         <h1>{title}</h1>
       </div>
       <section className='project-info'>
         <article className='project-info-left'>
           <Image fixed={fixed} alt={title}/>
-          <h3>Tech Stack</h3>
           <div className='badge-container'>
             {formattedTech}
           </div>
-          <a href={deployedUrl} target='_blank'>Deployed Project</a>
-          <a href={repoUrl} target='_blank'>Repo</a>
+          <div className='link-btn-container'>
+            <LinkButton linkText='Deployed Project' url={deployedUrl}/>
+            <LinkButton linkText='Repo' url={repoUrl}/>
+          </div>
         </article>
-        <article>
-          <h1>Abstract</h1>
+        <article className='project-info-right'>
           <p>{abstract}</p>
         </article>
       </section>

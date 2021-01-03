@@ -10,7 +10,7 @@ const Projects = ({ data }) => {
 
   const allProjects = [...projects, ...projects, ...projects, ...projects].map(project => (
     <Link to={`/projects/${project.slug}`} className='project-preview'>
-      <Image fluid={project.image.fluid} alt={`${project.title} Screenshot`} />
+      <Image fluid={project.image.fluid} alt={`${project.title} Screenshot`} className='project-preview-img' />
       <h4>{project.title}</h4>
     </Link>
   ))
