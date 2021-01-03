@@ -25,15 +25,15 @@ const About = ({ data }) => {
           <div className='badge-container'>
             { formattedLang }
           </div>
-            <h3>Libraries / Frameworks</h3>
+          <h3>Libraries / Frameworks</h3>
           <div className='badge-container'>
             { formattedLib }
           </div>
-            <h3>Familiar With</h3>
+          <h3>Familiar With</h3>
           <div className='badge-container'>
             { formattedFamiliar }
           </div>
-            <h3>Other Skills</h3>
+          <h3>Other Skills</h3>
           <div className='badge-container'>
             { formattedOther }
           </div>
