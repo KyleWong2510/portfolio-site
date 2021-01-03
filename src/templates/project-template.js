@@ -11,12 +11,11 @@ const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {f
   return (
     <Layout>
       <div className='single-project-top'>
-        <Link to='/projects' className='link-btn'>Back to Projects</Link>
         <h1>{title}</h1>
       </div>
       <section className='project-info'>
         <article className='project-info-left'>
-          <Image fixed={fixed} alt={title}/>
+          <Image fixed={fixed} alt={title} className='project-info-img' />
           <div className='badge-container'>
             {formattedTech}
           </div>
@@ -29,6 +28,7 @@ const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {f
           <p>{abstract}</p>
         </article>
       </section>
+      <Link to='/projects' className='link-btn'>Back to Projects</Link>
     </Layout>
   )
 }
