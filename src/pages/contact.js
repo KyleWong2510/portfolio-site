@@ -25,7 +25,7 @@ const Contact = () => {
             name='message'
           />
         </div>
-        <input type='submit' value='Submit' className='submit-btn' />
+        <input type='submit' value='Send Message' className='submit-btn' />
       </form>
     </Layout>
   )
