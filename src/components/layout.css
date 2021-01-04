@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
+:root {
+  --primary-text: #464866;
+  --secondary-text: #25274d;
+  --light-bg: #aaabb8;
+  --dark-bg: #464866;
+  --bright-accent: #2e9cca;
+  --dark-accent: #29648a;
+  --light: #ffffff;
+}
+
 * {
   box-sizing: border-box;
-  color: black;
+  color: var(--secondary-text);
   font-family: "Montserrat", sans-serif;
   line-height: 1.75;
   padding: 0;
@@ -23,7 +33,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -36,7 +45,7 @@ body {
 
 header {
   align-items: flex-end;
-  background-color: gold;
+  background-color: var(--dark-bg);
   display: flex;
   font-size: 2rem;
   height: 10vh;
@@ -47,6 +56,7 @@ header {
 
 h1,
 h4 {
+  color: var(--primary-text);
   font-family: "Raleway", sans-serif;
   margin-bottom: 1rem;
 }
@@ -58,17 +68,22 @@ nav {
 }
 
 a {
+  border: solid 3px var(--light-bg);
+  border-radius: 1000px;
+  color: var(--light-bg);
+  padding: 0rem 0.5rem;
   text-decoration: none;
   width: fit-content;
 }
 
 footer {
-  background-color: black;
+  background-color: var(--secondary-text);
   height: 10vh;
 }
 
 main {
   align-items: center;
+  background-color: var(--light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,9 +92,13 @@ main {
   width: 100%;
 }
 
+/* PROJECTS */
 .project-preview {
+  background-color: var(--dark-accent);
+  border: none;
   border-radius: 5px;
-  box-shadow: 3px 3px 25px 3px #b5b5b5;
+  box-shadow: 3px 3px 25px 3px var(--dark-bg);
+  padding: 0;
   width: 100%;
 }
 
@@ -89,7 +108,9 @@ main {
 }
 
 .project-preview h4 {
-  padding: 1.5rem;
+  color: var(--light);
+  margin-bottom: 0;
+  padding: 0.5rem;
   text-align: center;
 }
 
@@ -134,7 +155,7 @@ main {
 
 .personal-bio-container {
   align-items: center;
-  background-color: grey;
+  background-color: var(--light-bg);
   display: flex;
   height: 80vh;
   justify-content: center;
@@ -153,7 +174,7 @@ main {
 
 .dev-bio {
   align-items: center;
-  background-color: gold;
+  background-color: var(--bright-accent);
   display: flex;
   height: fit-content;
   justify-content: center;
@@ -161,15 +182,22 @@ main {
 }
 
 .dev-bio p {
+  color: var(--light);
   width: 50%;
 }
 
 .skills-container {
+  background-color: var(--dark-accent);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2rem;
+}
+
+.skills-container h4 {
+  color: var(--light);
+  text-transform: uppercase;
 }
 
 .skill-type {
@@ -185,8 +213,9 @@ main {
 }
 
 .tech-badge {
-  background-color: grey;
+  background-color: var(--secondary-text);
   border-radius: 3px;
+  color: var(--light);
   height: fit-content;
   font-size: small;
   margin: 0.25rem;
@@ -228,8 +257,10 @@ main {
 }
 
 .link-btn {
-  background-color: gold;
-  border-radius: 3px;
+  background-color: var(--secondary-text);
+  border-radius: 5px;
+  border: 0;
+  color: var(--light);
   margin: 0.25rem;
   padding: 0.5rem;
   width: fit-content;
@@ -238,17 +269,17 @@ main {
 /* CONTACT */
 input,
 textarea {
-  background-color: white;
-  border: none;
+  background-color: var(--light);
+  border: 2px solid var(--dark-accent);
   border-radius: 3px;
   margin-bottom: 1.25rem;
   padding: 0.5rem;
 }
 
 form {
-  background-color: gold;
+  background-color: var(--light);
   border-radius: 5px;
-  box-shadow: 3px 3px 25px 3px #b5b5b5;
+  box-shadow: 3px 3px 25px 3px var(--light-bg);
   width: 35%;
 }
 
@@ -262,10 +293,11 @@ form div {
 }
 
 .submit-btn {
-  background-color: grey;
+  background-color: var(--dark-accent);
   border-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  color: var(--light);
   height: 4rem;
   margin: 0;
   width: 100%;
