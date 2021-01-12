@@ -6,9 +6,9 @@ const Header = () => (
   <header>
     <Link to="/">Kyle Wong</Link>
     <nav>        
-      <Link to="/about/">About</Link>
-      <Link to="/projects/">Projects</Link>
-      <Link to="/contact/">Contact</Link>
+      <Link to="/about/" activeClassName='active-nav'>About</Link>
+      <Link to="/projects/" activeClassName='active-nav'>Projects</Link>
+      <Link to="/contact/" activeClassName='active-nav'>Contact</Link>
     </nav>
   </header>
 )
