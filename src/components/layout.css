@@ -127,7 +127,7 @@ main {
   align-self: center;
   max-width: 1170px;
   padding: 2rem 0rem;
-  width: 50%;
+  width: 906px;
 }
 
 /* ABOUT */
@@ -345,6 +345,15 @@ form div {
   }
 }
 
+@media (max-width: 672px) {
+  .project-preview h4 {
+    font-size: 2.25rem;
+  }
+  .project-preview h4:hover {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 1080px) {
   form {
     width: 70%;
@@ -363,6 +372,9 @@ form div {
     width: 80%;
   }
   .skill-type {
+    width: 80%;
+  }
+  .project-previews {
     width: 80%;
   }
 }
