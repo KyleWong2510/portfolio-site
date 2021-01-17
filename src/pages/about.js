@@ -18,14 +18,12 @@ const About = ({ data }) => {
       <SEO title="About" />
       <div className='about'>
         {/* <h1>About</h1> */}
-        <div className='personal-bio-container'>
           <div className='personal-bio'>
             <div className='image'></div>
             <p>
               { personalBio }
             </p>
           </div>
-        </div>
         <div className='dev-bio'>
           <p>
             { devBio }
