@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import TechBadge from '../components/techBadge'
+import TechBadge from '../components/TechBadge'
 
 const About = ({ data }) => {
   const { contentfulAbout: { personalBio: { personalBio }, devBio: { devBio }, languages, libraries, familiarWith, otherSkills }} = data
