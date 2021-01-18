@@ -238,7 +238,7 @@ main {
   height: fit-content;
   justify-content: center;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 906px;
 }
 
 .project-info-img {
@@ -376,5 +376,16 @@ form div {
   }
   .project-previews {
     width: 80%;
+  }
+  .project-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .project-info-left,
+  .project-info-right {
+    width: 100%;
   }
 }
