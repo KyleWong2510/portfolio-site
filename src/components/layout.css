@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@900&display=swap");
 :root {
-  --primary-text: #464866;
-  --secondary-text: #25274d;
-  --light-bg: #aaabb8;
-  --dark-bg: #464866;
-  --bright-accent: #2e9cca;
-  --dark-accent: #29648a;
-  --light: #ffffff;
+  --primary-text: #374357;
+  --secondary-text: #465a79;
+  --primary-accent: #93b9f5;
+  --secondary-accent: #6796de;
+  --primary-bg: #f3f9fc;
+  --secondary-bg: #d8e3f4;
   --header-font: "Roboto", sans-serif;
   --body-font: "Lato", sans-serif;
 }
@@ -16,26 +15,21 @@
   color: var(--secondary-text);
   font-family: var(--body-font);
   font-size: 1.25rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
+  word-wrap: break-word;
 }
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font: 112.5%/1.45em georgia, serif, sans-serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
 }
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -45,30 +39,33 @@ body {
 
 header {
   align-items: flex-end;
-  background-color: var(--dark-bg);
+  background-color: var(--secondary-accent);
   display: flex;
   font-size: 1rem;
   height: 10vh;
   justify-content: space-between;
   padding: 1.5rem 3rem 1rem;
-  width: 100vw;
 }
 
 h1,
 h4 {
-  color: var(--primary-text);
+  color: var(--primary-accent);
   font-family: var(--header-font);
   margin-bottom: 1rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  width: 20vw;
+  justify-content: flex-end;
+  width: 40%;
+}
+
+nav a {
+  margin-right: 2rem;
 }
 
 a {
-  color: var(--light-bg);
+  color: var(--secondary-bg);
   font-family: var(--header-font);
   text-decoration: none;
   transition: 0.4s;
@@ -77,33 +74,23 @@ a {
 
 .active-nav,
 a:hover {
-  color: var(--light);
+  color: var(--primary-bg);
   font-size: 2rem;
   transition: 0.4s;
 }
 
-/* a:hover {
-  color: var(--light);
-  font-size: 2rem;
-  transition: 0.4s;
-} */
-
 footer {
-  background-color: var(--secondary-text);
+  background-color: var(--secondary-accent);
   height: 10vh;
 }
 
 main {
   align-items: center;
-  background-color: var(--light);
+  background-color: var(--primary-bg);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 0 auto;
   min-height: 80vh;
-  max-height: fit-content;
-  padding-top: 3rem;
-  width: 100%;
 }
 
 /* PROJECTS */
@@ -115,19 +102,19 @@ main {
   width: fit-content;
 }
 
-.project-preview h4:hover {
-  color: var(--secondary-text);
-  font-size: 3.75rem;
-  transition: 0.4s;
-}
-
 .project-preview h4 {
-  color: var(--dark-accent);
+  color: var(--primary-accent);
   margin-bottom: 1rem;
   padding: 0;
   font-size: 3.5rem;
   transition: 0.4s;
   width: fit-content;
+}
+
+.project-preview h4:hover {
+  color: var(--secondary-accent);
+  font-size: 3.75rem;
+  transition: 0.4s;
 }
 
 .project-preview p {
@@ -140,12 +127,16 @@ main {
   align-self: center;
   max-width: 1170px;
   padding: 2rem 0rem;
-  width: 50%;
+  width: 906px;
 }
 
-/* ABOUT  */
+/* ABOUT */
+
 .about {
-  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .image {
@@ -156,41 +147,36 @@ main {
   width: 300px;
 }
 
-.personal-bio-container {
+.personal-bio {
   align-items: center;
-  background-color: var(--light);
+  background-color: var(--primary-bg);
   display: flex;
   height: 80vh;
-  justify-content: center;
-  padding: 3rem;
-}
-
-.personal-bio {
+  justify-content: space-between;
   display: flex;
-  width: 50%;
+  width: 906px;
 }
 
 .personal-bio p {
   align-self: center;
-  width: 50%;
+  width: 60%;
 }
 
 .dev-bio {
   align-items: center;
-  background-color: var(--dark-accent);
+  background-color: var(--secondary-bg);
   display: flex;
   height: fit-content;
   justify-content: center;
-  padding: 5rem;
 }
 
 .dev-bio p {
-  color: var(--light);
-  width: 50%;
+  margin: 5rem 3rem;
+  width: 906px;
 }
 
 .skills-container {
-  background-color: var(--bright-accent);
+  background-color: var(--primary-accent);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,26 +185,31 @@ main {
 }
 
 .skills-container h4 {
-  color: var(--light);
+  color: var(--primary-bg);
   text-transform: uppercase;
 }
 
 .skill-type {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0.5rem 0;
-  width: 50%;
+  width: 906px;
 }
 
 .badge-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 0 0 1rem;
+  width: fit-content;
 }
 
 .tech-badge {
-  background-color: var(--dark-accent);
+  background-color: var(--secondary-accent);
   border-radius: 3px;
-  color: var(--light);
+  color: var(--secondary-bg);
   height: fit-content;
   font-size: 1rem;
   margin: 0.25rem;
@@ -236,7 +227,7 @@ main {
 }
 
 .single-project-top h1 {
-  color: var(--dark-accent);
+  color: var(--secondary-accent);
   font-size: 3rem;
   margin: 1rem 0rem;
 }
@@ -247,7 +238,7 @@ main {
   height: fit-content;
   justify-content: center;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 906px;
 }
 
 .project-info-img {
@@ -271,10 +262,10 @@ main {
 }
 
 .link-btn {
-  background-color: var(--secondary-text);
+  background-color: var(--primary-accent);
   border-radius: 5px;
-  border: solid 2px var(--light);
-  color: var(--light);
+  border: solid 2px var(--primary-bg);
+  color: var(--primary-bg);
   font-family: var(--body-font);
   margin: 1rem;
   padding: 0.5rem;
@@ -283,16 +274,17 @@ main {
 }
 
 .link-btn:hover {
-  background-color: var(--light);
-  border: solid 2px var(--secondary-text);
-  color: var(--secondary-text);
+  background-color: var(--secondary-accent);
+  border: solid 2px var(--secondary-accent);
+  color: var(--secondary-bg);
+  font-size: 1.5rem;
 }
 
 /* CONTACT */
 input,
 textarea {
-  background-color: var(--light);
-  border: 2px solid var(--dark-accent);
+  background-color: var(--primary-bg);
+  border: 2px solid var(--primary-accent);
   border-radius: 3px;
   margin-bottom: 1.25rem;
   padding: 0.5rem;
@@ -300,14 +292,15 @@ textarea {
 }
 
 form {
-  background-color: var(--light);
+  background-color: var(--secondary-bg);
   border-radius: 5px;
-  box-shadow: 3px 3px 25px 3px var(--light-bg);
+  box-shadow: 1px 1px 15px var(--secondary-text);
   padding-top: 2rem;
-  width: 35%;
+  max-width: 672px;
 }
 
 form h1 {
+  color: var(--secondary-accent);
   font-size: 2rem;
   margin: 0;
   text-align: center;
@@ -318,12 +311,81 @@ form div {
 }
 
 .submit-btn {
-  background-color: var(--dark-accent);
+  background-color: var(--primary-accent);
   border-radius: 0px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  color: var(--light);
+  color: var(--primary-bg);
+  font-weight: 700;
   height: 4rem;
   margin: 0;
   width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-accent);
+  border-color: var(--secondary-accent);
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav a {
+    margin: 0;
+  }
+}
+
+@media (max-width: 672px) {
+  .project-preview h4 {
+    font-size: 2.25rem;
+  }
+  .project-preview h4:hover {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  form {
+    width: 70%;
+  }
+  .personal-bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .personal-bio p {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .dev-bio p {
+    width: 80%;
+  }
+  .skill-type {
+    width: 80%;
+  }
+  .project-previews {
+    width: 80%;
+  }
+  .project-info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+  }
+  .project-info-left,
+  .project-info-right {
+    width: 100%;
+  }
 }
