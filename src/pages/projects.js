@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 
 const Projects = ({ data }) => {
   const { allContentfulProject: { nodes: projects }} = data 
