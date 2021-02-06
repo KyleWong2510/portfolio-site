@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/Layout'
 import Image from 'gatsby-image'
-import TechBadge from '../components/techBadge'
-import LinkButton from '../components/linkButton'
+import TechBadge from '../components/TechBadge'
+import LinkButton from '../components/LinkButton'
 
 const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {fluid}, techStack, repoUrl, deployedUrl}}}) => {
   const formattedTech = techStack.map(tech => <TechBadge tech={tech} />)
