@@ -140,9 +140,8 @@ main {
   overflow: auto;
 }
 
-.image {
-  background-color: black;
-  border: solid 1px black;
+.about-image {
+  border-radius: 150px;
   height: 300px;
   margin-right: 3rem;
   width: 300px;

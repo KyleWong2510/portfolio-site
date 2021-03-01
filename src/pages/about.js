@@ -4,9 +4,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import TechBadge from '../components/TechBadge'
+import Image from 'gatsby-image'
 
 const About = ({ data }) => {
-  const { contentfulAbout: { personalBio: { personalBio }, devBio: { devBio }, languages, libraries, familiarWith, otherSkills }} = data
+  const { contentfulAbout: { personalBio: { personalBio }, devBio: { devBio }, image: { fluid }, languages, libraries, familiarWith, otherSkills }} = data
 
   const formattedLang = languages.map(lang => <TechBadge tech={lang} />)
   const formattedLib = libraries.map(lib => <TechBadge tech={lib} />)
@@ -17,9 +18,8 @@ const About = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <div className='about'>
-        {/* <h1>About</h1> */}
           <div className='personal-bio'>
-            <div className='image'></div>
+            <Image fluid={fluid} alt='headshot' className='about-image' />
             <p>
               { personalBio }
             </p>
@@ -68,6 +68,11 @@ export const query = graphql`
       }
       devBio {
         devBio
+      }
+      image {
+        fluid {
+          ...GatsbyContentfulFluid
+        }
       }
       languages
       libraries
