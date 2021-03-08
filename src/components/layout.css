@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@900&display=swap");
 :root {
-  --primary-text: #374357;
-  --secondary-text: #465a79;
-  --primary-accent: #93b9f5;
-  --secondary-accent: #6796de;
-  --primary-bg: #f3f9fc;
-  --secondary-bg: #d8e3f4;
+  --dark: #292929;
+  --mid: #545454;
+  --light: #737373;
+  --color: #f6df2c;
   --header-font: "Roboto", sans-serif;
   --body-font: "Lato", sans-serif;
 }
@@ -39,7 +37,7 @@ body {
 
 header {
   align-items: flex-end;
-  background-color: var(--secondary-accent);
+  background-color: var(--dark);
   display: flex;
   font-size: 1rem;
   height: 10vh;
@@ -47,9 +45,14 @@ header {
   padding: 1.5rem 3rem 1rem;
 }
 
+.header-logo {
+  height: 100px;
+  width: 100px;
+}
+
 h1,
 h4 {
-  color: var(--primary-accent);
+  color: var(--color);
   font-family: var(--header-font);
   margin-bottom: 1rem;
 }
@@ -65,7 +68,7 @@ nav a {
 }
 
 a {
-  color: var(--secondary-bg);
+  color: var(--color);
   font-family: var(--header-font);
   text-decoration: none;
   transition: 0.4s;
@@ -74,14 +77,14 @@ a {
 
 .active-nav,
 a:hover {
-  color: var(--primary-bg);
+  color: var(--color);
   font-size: 2rem;
   transition: 0.4s;
 }
 
 footer {
-  background-color: var(--secondary-accent);
-  height: 10vh;
+  background-color: var(--dark);
+  height: 20vh;
 }
 
 main {
@@ -331,55 +334,45 @@ form div {
 
 /* HOME */
 .home {
-  display: flex;
-  height: 80vh;
-  width: 100vw;
-}
-
-.home-info,
-.home-about {
-  background-color: var(--secondary-bg);
+  align-items: center;
+  background-color: var(--mid);
   display: flex;
   flex-direction: column;
+  height: 80vh;
   justify-content: center;
+  width: 100%;
 }
 
-.home-img {
-  align-self: flex-end;
-  border-radius: 300px;
-  margin-bottom: 2rem;
-  max-height: 250px;
-  max-width: 250px;
-}
-
-.home-info {
-  height: 100%;
-  padding-right: 5rem;
-  width: 50%;
-}
-
-.home-info h1,
-.home-info p {
-  align-self: flex-end;
-  font-size: 2rem;
+.home h1 {
+  font-size: 5rem;
+  letter-spacing: 15px;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 5px 5px var(--light);
+  text-transform: uppercase;
   width: fit-content;
 }
 
-.home-about {
-  background-color: var(--primary-bg);
-  padding-left: 5rem;
-  width: 50%;
+.home p {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  width: fit-content;
 }
 
-.home-about p {
-  align-self: flex-start;
-  font-size: 1.5rem;
-  font-style: italic;
-  width: 60%;
+.home-links {
+  display: flex;
+  height: 10vh;
+  justify-content: space-around;
+  margin-top: 3rem;
+  width: 20%;
 }
 
-.home-info h1 {
-  font-size: 3rem;
+.gh-icon,
+.linkedin-icon {
+  height: 5rem;
+  width: 5rem;
 }
 
 @media (max-width: 600px) {

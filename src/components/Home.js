@@ -2,6 +2,8 @@ import React from "react"
 import Image from 'gatsby-image'
 import SEO from "../components/Seo"
 import { StaticQuery, graphql } from 'gatsby'
+import ghGold from '../images/ghGold.svg'
+import linkedinGold from '../images/linkedinGold.svg'
 
 const Home = () => {
   return <StaticQuery 
@@ -9,16 +11,8 @@ const Home = () => {
       graphql`
         {
           contentfulHome {
-            welcomeMessage {
-              welcomeMessage
-            }
             title
             name
-            headshot {
-              fluid {
-                ...GatsbyContentfulFluid
-              }
-            }
           }
         }
       `
@@ -27,14 +21,16 @@ const Home = () => {
       <section id='home'>
         <SEO title="Home" />
         <div className='home'>
-          <section className='home-info'>
-            <Image fluid={data.contentfulHome.headshot.fluid} alt={`${data.contentfulHome.name} headshot`} className='home-img' />
-            <h1>{data.contentfulHome.name}</h1>
-            <p>{data.contentfulHome.title}</p>
-          </section>
-          <section className='home-about'>
-            <p>{data.contentfulHome.welcomeMessage.welcomeMessage}</p>
-          </section>
+          <h1>{data.contentfulHome.name}</h1>
+          <p>{data.contentfulHome.title}</p>
+          <div className='home-links'>
+            <a href='https://github.com/KyleWong2510'>
+              <img src={ghGold} className='gh-icon' />
+            </a>
+            <a href='https://www.linkedin.com/in/kyle-shigetomi-wong/'>
+              <img src={linkedinGold} className='linkedin-icon' />
+            </a>
+          </div>
         </div>
       </section>
     )}
