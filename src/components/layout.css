@@ -10,7 +10,6 @@
 
 * {
   box-sizing: border-box;
-  color: var(--secondary-text);
   font-family: var(--body-font);
   font-size: 1.25rem;
   margin: 0;
@@ -40,7 +39,7 @@ header {
   background-color: var(--dark);
   display: flex;
   font-size: 1rem;
-  height: 10vh;
+  height: 15vh;
   justify-content: space-between;
   padding: 1.5rem 3rem 1rem;
 }
@@ -93,7 +92,7 @@ main {
   display: flex;
   flex-direction: column;
   line-height: 1.75rem;
-  height: 90vh;
+  height: 85vh;
   overflow: auto;
 }
 
@@ -354,6 +353,7 @@ form div {
 }
 
 .home p {
+  color: var(--color);
   font-size: 2rem;
   letter-spacing: 4px;
   text-align: center;
@@ -372,7 +372,15 @@ form div {
 .gh-icon,
 .linkedin-icon {
   height: 5rem;
+  transition: 0.5s;
   width: 5rem;
+}
+
+.gh-icon:hover,
+.linkedin-icon:hover {
+  height: 5.5rem;
+  transition: 0.5s;
+  width: 5.5rem;
 }
 
 @media (max-width: 600px) {
