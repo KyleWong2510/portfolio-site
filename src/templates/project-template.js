@@ -11,7 +11,7 @@ const ComponentName = ({ data: {project: {title, abstract: {abstract}, image: {f
   return (
     <Layout>
       <div className='single-project-top'>
-        <a href='#projects' className='link-btn'>Back to Projects</a>
+        <Link to='/projects' className='link-btn'>Back to Projects</Link>
         <h1>{title}</h1>
       </div>
       <section className='project-info'>

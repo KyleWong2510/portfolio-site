@@ -1,5 +1,6 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+import ProjectCard from '../components/ProjectCard'
 import SEO from "../components/Seo"
 
 const Projects = () => {
@@ -9,10 +10,19 @@ const Projects = () => {
         {
           allContentfulProject {
             nodes {
+              abstract {
+                abstract
+              }
+              image {
+                fluid {
+                  ...GatsbyContentfulFluid
+                }
+              }
               title
+              techStack
+              repoUrl
               briefDesc
-              slug
-              id
+              deployedUrl
             }
           }
         }
@@ -21,14 +31,18 @@ const Projects = () => {
     render={data => (
       <section id='projects'>
         <SEO title="Projects" />
-        <section className='project-previews'>
+        <section className='projects'>
           { data.allContentfulProject.nodes.map((project, i )=> (
-            <div className='project-preview' key={i}>
-              <Link to={`/projects/${project.slug}`} >
-                <h4>{project.title}</h4>
-                <p>{project.briefDesc}</p>
-              </Link>
-            </div>
+            <ProjectCard 
+              key={i}
+              title={project.title}
+              image={project.image.fluid}
+              briefDesc={project.briefDesc}
+              abstract={project.abstract.abstract}
+              techStack={project.techStack}
+              repoUrl={project.repoUrl}
+              deployedUrl={project.deployedUrl}
+            />
           ))}
         </section>
       </section>
