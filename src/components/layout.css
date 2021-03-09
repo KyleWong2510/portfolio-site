@@ -34,6 +34,18 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
+main {
+  align-items: center;
+  background-color: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  line-height: 1.75rem;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
 header {
   align-items: flex-end;
   background-color: var(--dark);
@@ -60,11 +72,12 @@ nav {
   display: flex;
   margin-bottom: 1rem;
   justify-content: flex-end;
-  width: 40%;
+  width: fit-content;
 }
 
 nav a {
-  margin-right: 2rem;
+  margin-right: 3rem;
+  font-size: 2rem;
 }
 
 a {
@@ -75,27 +88,10 @@ a {
   width: fit-content;
 }
 
-.active-nav,
 a:hover {
   color: var(--color);
-  font-size: 2rem;
-  transition: 0.4s;
-}
-
-footer {
-  background-color: var(--dark);
-  height: 20vh;
-}
-
-main {
-  align-items: center;
-  background-color: var(--primary-bg);
-  display: flex;
-  flex-direction: column;
-  height: 85vh;
-  line-height: 1.75rem;
-  overflow: auto;
-  scroll-behavior: smooth;
+  transform: scale(1.25);
+  text-shadow: 2px 2px 5px var(--mid);
 }
 
 /* HOME */
@@ -139,24 +135,34 @@ main {
 .gh-icon,
 .linkedin-icon {
   height: 5rem;
+  opacity: 0.8;
   transition: 0.5s;
   width: 5rem;
 }
 
 .gh-icon:hover,
 .linkedin-icon:hover {
-  height: 5.5rem;
+  opacity: 1;
+  transform: scale(1.1);
   transition: 0.5s;
-  width: 5.5rem;
 }
 
 /* ABOUT */
 
 .about {
   align-items: center;
+  background-color: var(--dark);
   display: flex;
   flex-direction: column;
   overflow: auto;
+}
+
+.about h1 {
+  font-size: 3rem;
+  height: 6rem;
+  margin: 0;
+  padding: 3rem 0rem 0rem;
+  text-align: center;
 }
 
 .about-image {
@@ -171,9 +177,9 @@ main {
   background-color: var(--dark);
   color: var(--color);
   display: flex;
-  height: 80vh;
+  height: fit-content;
   justify-content: space-between;
-  padding: 0 25%;
+  padding: 0 25% 3rem;
   width: 100%;
 }
 
@@ -234,9 +240,19 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* min-height: 80vh; */
-  padding: 5rem 5rem;
+  padding: 2rem 5rem 5rem;
   row-gap: 3rem;
   width: 100%;
+}
+
+.projects-header {
+  background-color: var(--color);
+  color: var(--dark);
+  font-size: 3rem;
+  height: 6rem;
+  margin: 0;
+  padding: 3rem 0rem 0rem;
+  text-align: center;
 }
 
 /* PROJECT CARDS */
@@ -252,13 +268,13 @@ main {
 .project-card:hover {
   transform: scale(1.03);
   transition: 0.5s;
-  /* width: 103%; */
 }
 
-.project-card h1 {
+.project-title {
   color: var(--color);
   font-size: 2rem;
   text-align: center;
+  text-shadow: 2px 2px var(--mid);
 }
 
 .project-card p {
@@ -267,6 +283,7 @@ main {
   height: 15%;
   padding: 1rem;
 }
+
 .project-img {
   height: 45%;
 }
@@ -279,7 +296,6 @@ main {
   display: flex;
   height: 2.5rem;
   justify-content: center;
-  /* padding: 0.5rem; */
   text-align: center;
   width: 35%;
 }
@@ -359,6 +375,31 @@ form div {
   border-color: var(--color);
   cursor: pointer;
   color: var(--mid);
+}
+
+/* FOOTER */
+footer {
+  align-items: center;
+  background-color: var(--mid);
+  color: var(--color);
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100vw;
+}
+
+.footer-links {
+  display: flex;
+  height: 5vh;
+  justify-content: space-around;
+  width: 10%;
+}
+
+.gh-icon-footer,
+.linkedin-icon-footer {
+  height: 3rem;
+  width: 3rem;
 }
 
 @media (max-width: 600px) {

@@ -17,7 +17,7 @@ const ProjectCard = ({
 
   return (
     <div className='project-card' key={key}>
-      <h1>{title}</h1>
+      <h1 className='project-title'>{title}</h1>
       <Image fluid={image} alt={`${title} Screenshot`} className='project-img' />
       <p>{briefDesc}</p>
       <div className='badge-container' style={{height: '20%'}}>

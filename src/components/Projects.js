@@ -1,7 +1,7 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import ProjectCard from '../components/ProjectCard'
-import SEO from "../components/Seo"
+import SEO from '../components/Seo'
 
 const Projects = () => {
   return <StaticQuery 
@@ -30,7 +30,8 @@ const Projects = () => {
     }
     render={data => (
       <section id='projects'>
-        <SEO title="Projects" />
+        <SEO title='Projects' />
+        <h1 className='projects-header'>SELECTED PROJECTS</h1>
         <section className='projects'>
           { data.allContentfulProject.nodes.map((project, i )=> (
             <ProjectCard 

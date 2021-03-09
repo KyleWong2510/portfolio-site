@@ -1,5 +1,5 @@
-import React from "react"
-import SEO from "../components/Seo"
+import React from 'react'
+import SEO from '../components/Seo'
 import { StaticQuery, graphql } from 'gatsby'
 import ghGold from '../images/ghGold.svg'
 import linkedinGold from '../images/linkedinGold.svg'
@@ -18,7 +18,7 @@ const Home = () => {
     }
     render={data => (
       <section id='home'>
-        <SEO title="Home" />
+        <SEO title='Home' />
         <div className='home'>
           <h1>{data.contentfulHome.name}</h1>
           <p>{data.contentfulHome.title}</p>
