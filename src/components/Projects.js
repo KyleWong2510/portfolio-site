@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import ProjectCard from '../components/ProjectCard'
+import ProjectCard from './ProjectCard'
 import SEO from '../components/Seo'
 
 const Projects = () => {

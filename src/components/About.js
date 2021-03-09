@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import SEO from '../components/Seo'
-import TechBadge from '../components/TechBadge'
+// import SEO from '../components/Seo'
+import TechBadge from './TechBadge'
 import Img from 'gatsby-image'
 
 const About = () => {

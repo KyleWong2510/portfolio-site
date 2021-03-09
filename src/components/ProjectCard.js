@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import TechBadge from '../components/TechBadge'
-import LinkButton from '../components/LinkButton'
+import TechBadge from './TechBadge'
+import LinkButton from './LinkButton'
 
 const ProjectCard = ({ 
   key, 
