@@ -1,12 +1,11 @@
 import React from 'react'
-import Layout from  '../components/Layout'
 import SEO from '../components/Seo'
 
 const Contact = () => {
   return (
-    <Layout>
-      <SEO title="Contact" />
-      <form action="https://formspree.io/f/xnqooelr" method="POST">
+    <section id='contact'>
+      <SEO title='Contact' />
+      <form action='https://formspree.io/f/xnqooelr' method='POST'>
         <h1>Contact Me</h1>
         <div>
           <input 
@@ -27,7 +26,7 @@ const Contact = () => {
         </div>
         <input type='submit' value='Send Message' className='submit-btn' />
       </form>
-    </Layout>
+    </section>
   )
 }
 
