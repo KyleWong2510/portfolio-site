@@ -10,11 +10,8 @@ const About = () => {
       graphql`
         {
           contentfulAbout {
-            personalBio {
-              personalBio
-            }
-            devBio {
-              devBio
+            bio {
+              bio
             }
             image {
               fluid {
@@ -23,7 +20,6 @@ const About = () => {
             }
             languages
             libraries
-            familiarWith
             otherSkills
           }
         }
@@ -36,12 +32,7 @@ const About = () => {
           <div className='personal-bio'>
             <Image fluid={data.contentfulAbout.image.fluid} alt='headshot' className='about-image' />
             <p>
-              { data.contentfulAbout.personalBio.personalBio }
-            </p>
-          </div>
-          <div className='dev-bio'>
-            <p>
-              { data.contentfulAbout.devBio.devBio }
+              { data.contentfulAbout.bio.bio }
             </p>
           </div>
           <section className='skills-container'>
@@ -55,12 +46,6 @@ const About = () => {
               <h4>Libraries / Frameworks</h4>
               <div className='badge-container'>
                 { data.contentfulAbout.libraries.map(lib => <TechBadge tech={lib} />) }
-              </div>
-            </div>
-            <div className='skill-type'>
-              <h4>Familiar With</h4>
-              <div className='badge-container'>
-                { data.contentfulAbout.familiarWith.map(tech => <TechBadge tech={tech} />) }
               </div>
             </div>
             <div className='skill-type'>

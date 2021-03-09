@@ -151,12 +151,13 @@ main {
 
 .personal-bio {
   align-items: center;
-  background-color: var(--primary-bg);
+  background-color: var(--dark);
+  color: var(--color);
   display: flex;
   height: 80vh;
   justify-content: space-between;
-  display: flex;
-  width: 906px;
+  padding: 0 25%;
+  width: 100%;
 }
 
 .personal-bio p {
@@ -164,21 +165,8 @@ main {
   width: 60%;
 }
 
-.dev-bio {
-  align-items: center;
-  background-color: var(--secondary-bg);
-  display: flex;
-  height: fit-content;
-  justify-content: center;
-}
-
-.dev-bio p {
-  margin: 5rem 3rem;
-  width: 906px;
-}
-
 .skills-container {
-  background-color: var(--primary-accent);
+  background-color: var(--mid);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -187,7 +175,7 @@ main {
 }
 
 .skills-container h4 {
-  color: var(--primary-bg);
+  color: var(--color);
   text-transform: uppercase;
 }
 
@@ -209,11 +197,14 @@ main {
 }
 
 .tech-badge {
-  background-color: var(--secondary-accent);
+  background-color: var(--light);
   border-radius: 3px;
-  color: var(--secondary-bg);
+  border: solid 2px var(--color);
+  box-shadow: 0px 5px 50px -10px var(--dark);
+  color: var(--color);
   height: fit-content;
   font-size: 1rem;
+  font-weight: 700;
   margin: 0.25rem;
   padding: 0.5rem;
   width: fit-content;
