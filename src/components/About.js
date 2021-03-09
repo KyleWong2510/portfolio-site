@@ -27,7 +27,7 @@ const About = () => {
     }
     render={data => (
       <section id='about'>
-        <SEO title='About' />
+        {/* <SEO title='About' /> */}
         <section className='about'>
           <h1>ABOUT</h1>
           <div className='personal-bio'>

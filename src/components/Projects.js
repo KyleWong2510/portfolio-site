@@ -30,7 +30,7 @@ const Projects = () => {
     }
     render={data => (
       <section id='projects'>
-        <SEO title='Projects' />
+        {/* <SEO title='Projects' /> */}
         <h1 className='projects-header'>SELECTED PROJECTS</h1>
         <section className='projects'>
           { data.allContentfulProject.nodes.map((project, i )=> (
