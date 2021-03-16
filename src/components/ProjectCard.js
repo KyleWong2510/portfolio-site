@@ -1,7 +1,7 @@
 import React from 'react'
-import Image from 'gatsby-image'
-import TechBadge from '../components/TechBadge'
-import LinkButton from '../components/LinkButton'
+import Img from 'gatsby-image'
+import TechBadge from './TechBadge'
+import LinkButton from './LinkButton'
 
 const ProjectCard = ({ 
   key, 
@@ -18,7 +18,7 @@ const ProjectCard = ({
   return (
     <div className='project-card' key={key}>
       <h1 className='project-title'>{title}</h1>
-      <Image fluid={image} alt={`${title} Screenshot`} className='project-img' />
+      <Img fluid={image} alt={`${title} Screenshot`} className='project-img' />
       <p>{briefDesc}</p>
       <div className='badge-container' style={{height: '20%'}}>
         {formattedTech}

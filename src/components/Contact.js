@@ -1,10 +1,10 @@
 import React from 'react'
-import SEO from '../components/Seo'
+// import SEO from '../components/Seo'
 
 const Contact = () => {
   return (
     <section id='contact'>
-      <SEO title='Contact' />
+      {/* <SEO title='Contact' /> */}
       <form action='https://formspree.io/f/xnqooelr' method='POST'>
         <h1>Contact Me</h1>
         <div>

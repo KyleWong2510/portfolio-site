@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import SEO from '../components/Seo'
-import TechBadge from '../components/TechBadge'
-import Image from 'gatsby-image'
+// import SEO from '../components/Seo'
+import TechBadge from './TechBadge'
+import Img from 'gatsby-image'
 
 const About = () => {
   return <StaticQuery 
@@ -27,11 +27,11 @@ const About = () => {
     }
     render={data => (
       <section id='about'>
-        <SEO title='About' />
+        {/* <SEO title='About' /> */}
         <section className='about'>
           <h1>ABOUT</h1>
           <div className='personal-bio'>
-            <Image fluid={data.contentfulAbout.image.fluid} alt='headshot' className='about-image' />
+            <Img fluid={data.contentfulAbout.image.fluid} alt='headshot' className='about-image' />
             <p>
               { data.contentfulAbout.bio.bio }
             </p>

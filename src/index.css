@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@900&display=swap");
+
 :root {
   --dark: #292929;
   --mid: #545454;
@@ -148,7 +149,6 @@ a:hover {
 }
 
 /* ABOUT */
-
 .about {
   align-items: center;
   background-color: var(--dark);
@@ -402,7 +402,7 @@ footer {
   width: 3rem;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   header {
     display: flex;
     height: 15vh;
@@ -461,4 +461,4 @@ footer {
   .project-info-right {
     width: 100%;
   }
-}
+} */
