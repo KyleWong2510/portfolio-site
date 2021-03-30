@@ -40,19 +40,19 @@ const About = () => {
             <div className='skill-type'>
               <h4>Languages</h4> 
               <div className='badge-container'>
-                { data.contentfulAbout.languages.map(lang => <TechBadge tech={lang} />) }
+                { data.contentfulAbout.languages.map((lang, i)=> <TechBadge key={i} tech={lang} />) }
               </div>
             </div>
             <div className='skill-type'>
               <h4>Libraries / Frameworks</h4>
               <div className='badge-container'>
-                { data.contentfulAbout.libraries.map(lib => <TechBadge tech={lib} />) }
+                { data.contentfulAbout.libraries.map((lib, i) => <TechBadge key={i} tech={lib} />) }
               </div>
             </div>
             <div className='skill-type'>
               <h4>Other Skills</h4>
               <div className='badge-container'>
-                { data.contentfulAbout.otherSkills.map(skill => <TechBadge tech={skill} />) }
+                { data.contentfulAbout.otherSkills.map((skill, i) => <TechBadge key={i} tech={skill} />) }
               </div>
             </div>
           </section>

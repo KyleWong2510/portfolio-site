@@ -4,7 +4,6 @@ import TechBadge from './TechBadge'
 import LinkButton from './LinkButton'
 
 const ProjectCard = ({ 
-  key, 
   title, 
   image, 
   briefDesc, 
@@ -13,10 +12,10 @@ const ProjectCard = ({
   repoUrl, 
   deployedUrl 
 }) => {
-  const formattedTech = techStack.map(tech => <TechBadge tech={tech} />)
+  const formattedTech = techStack.map((tech, i) => <TechBadge key={i} tech={tech} />)
 
   return (
-    <div className='project-card' key={key}>
+    <div className='project-card'>
       <h1 className='project-title'>{title}</h1>
       <Img fluid={image} alt={`${title} Screenshot`} className='project-img' />
       <p>{briefDesc}</p>
