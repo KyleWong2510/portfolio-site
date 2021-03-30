@@ -437,6 +437,10 @@ footer {
   header {
     align-items: center;
     flex-direction: column;
-    height: 20vh;
+    height: 25vh;
+  }
+
+  nav {
+    justify-content: space-between;
   }
 }
