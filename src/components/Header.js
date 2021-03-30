@@ -8,9 +8,9 @@ const Header = () => (
       <img src={kwLogo} alt='Logo' className='header-logo' />
     </a>
     <nav>        
-      <a href='#about' activeClassName='active-nav'>About</a>
-      <a href='#projects' activeClassName='active-nav'>Projects</a>
-      <a href='#contact' activeClassName='active-nav'>Contact</a>
+      <a href='#about'>About</a>
+      <a href='#projects'>Projects</a>
+      <a href='#contact'>Contact</a>
     </nav>
   </header>
 )
